@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "496355663513",
+    "firebase_url": "https://hfund-98c5b.firebaseio.com",
+    "project_id": "hfund-98c5b",
+    "storage_bucket": "hfund-98c5b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:496355663513:android:2fe15d3d6663d3de1d2208",
+        "android_client_info": {
+          "package_name": "com.example.hfund"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "496355663513-iuudlbudhic2k5sgd02h2iv077p0ral1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hfund",
+            "certificate_hash": "6969735c91c4fd336977481f8b74d349fd6ec4b5"
+          }
+        },
+        {
+          "client_id": "496355663513-mk7crok079mn2grvnkd5l53h6tgno1q3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6Zt5AMIh9rana4JiE6Nbu2C4nrtAYUwg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "496355663513-mk7crok079mn2grvnkd5l53h6tgno1q3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
