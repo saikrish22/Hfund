@@ -4,25 +4,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MembersActivity">
     <TextView
-        android:layout_marginTop="10dp"
-        android:text="      CHIT NAME        MONTHS"
-        android:fontFamily="monospace"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18dp"
         android:textColor="@color/colorAccent"
-        />
+        android:text="Chit Members"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="monospace"
+        android:textSize="24dp"/>
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
+        android:id="@+id/recycler_view_members"
         android:layout_marginTop="40dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/addChit"
+        android:id="@+id/addMember"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"

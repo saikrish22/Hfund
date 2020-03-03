@@ -74,6 +74,7 @@ public class AddChitFragment extends Fragment {
                         .setAction("Action", null).show();
                }
                else{
+                   String id = db.collection("chits").document().getId();
 
                    FirebaseAuth mAuth=FirebaseAuth.getInstance();
                    FirebaseUser currentUser=mAuth.getCurrentUser();
@@ -81,14 +82,16 @@ public class AddChitFragment extends Fragment {
                    Map<String, Object> chit = new HashMap<>();
                    chit.put("admin",currentUser.getUid() );
                    chit.put("name", name);
+                   chit.put("id",id);
                    chit.put("amount", Long.parseLong(amount));
                    chit.put("interest",Double.parseDouble(interest));
                    chit.put("members",Long.parseLong(members));
                    chit.put("months",Long.parseLong(months));
                    chit.put("createdOn",new Timestamp(new Date()));
                    chit.put("withDraws", Arrays.asList());
+
                    db.collection("chits")
-                           .document()
+                           .document(id)
                            .set(chit)
                            .addOnSuccessListener(new OnSuccessListener<Void>() {
                                @Override
