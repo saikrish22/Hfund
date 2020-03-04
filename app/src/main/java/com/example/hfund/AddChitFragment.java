@@ -80,7 +80,7 @@ public class AddChitFragment extends Fragment {
                    FirebaseUser currentUser=mAuth.getCurrentUser();
                    // Create a new user with a first and last name
                    Map<String, Object> chit = new HashMap<>();
-                   chit.put("admin",currentUser.getUid() );
+                   chit.put("admin",currentUser.getUid());
                    chit.put("name", name);
                    chit.put("id",id);
                    chit.put("amount", Long.parseLong(amount));

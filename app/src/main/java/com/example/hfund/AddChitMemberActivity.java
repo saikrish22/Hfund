@@ -63,18 +63,20 @@ public class AddChitMemberActivity extends AppCompatActivity {
                     SharedPreferences sharedPref =getApplicationContext().getSharedPreferences("Hfund",0);
                     String chitId = sharedPref.getString("chitId", "null");
                     Log.d(TAG,chitId);
+                    String id = db.collection("chits").document(chitId).collection("members").document().getId();
 
                                             FirebaseAuth mAuth=FirebaseAuth.getInstance();
                                             FirebaseUser currentUser=mAuth.getCurrentUser();
                                             // Create a new user with a first and last name
                                             Map<String, Object> chit = new HashMap<>();
+                                            chit.put("id",id);
                                             chit.put("name", name);
                                             chit.put("mobile", Long.parseLong(mobile));
                                             chit.put("address",address);
                                             db.collection("chits")
                                                     .document(chitId)
                                                     .collection("members")
-                                                    .document()
+                                                    .document(id)
                                                     .set(chit)
                                                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                                                         @Override

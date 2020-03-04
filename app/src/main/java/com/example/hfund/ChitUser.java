@@ -3,7 +3,15 @@ package com.example.hfund;
 import android.util.Log;
 
 public class ChitUser {
-    private String name,address;
+    private String name,address,id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getName() {
         Log.d("ChitUser","getting : "+name);
