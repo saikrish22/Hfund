@@ -163,6 +163,7 @@ public class UpdatePayActivity extends AppCompatActivity {
                                 public void onSuccess(Void aVoid) {
                                     Log.d("paid status","paid status updated successfully");
                                     payBtn.setEnabled(false);
+                                    payBtn.setText("paid");
                                     payBtn.setTextColor(Color.GRAY);
                                 }
                             })
