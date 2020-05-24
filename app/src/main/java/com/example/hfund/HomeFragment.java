@@ -25,7 +25,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 final FragmentTransaction ft = getFragmentManager().beginTransaction();
-                ft.replace(R.id.nav_host_fragment, new ChitsFragment(), "NewFragmentTag");
+                ft.replace(R.id.nav_host_fragment, new ChitsFragment(), "HomeFragment");
                 ft.addToBackStack(null);
                 ft.commit();
             }

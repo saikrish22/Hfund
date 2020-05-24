@@ -7,11 +7,11 @@
     android:layout_height="match_parent">
     <TextView
         android:layout_marginTop="10dp"
-        android:text="      CHIT NAME        MONTHS"
+        android:text="    CHIT NAME   MONTHS"
         android:fontFamily="monospace"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18dp"
+        android:textSize="24dp"
         android:textColor="@color/colorAccent"
         />
     <androidx.recyclerview.widget.RecyclerView

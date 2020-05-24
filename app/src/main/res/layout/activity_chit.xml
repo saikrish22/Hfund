@@ -7,9 +7,9 @@
     tools:context=".ChitActivity">
     <TextView
         android:id="@+id/text"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="12dp"
         android:textSize="24dp"
-        android:textColor="@color/colorAccent"
+        android:textColor="#ff5758"
         android:fontFamily="sans-serif"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,77 +18,164 @@
         android:layout_height="wrap_content"
         />
 
+    <RelativeLayout
+        android:id="@+id/rl_members"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/rl_updatePay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/members"
         android:layout_width="96dp"
         android:layout_height="96dp"
-        android:layout_margin="56dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginLeft="28dp"
         android:src="@drawable/mem"
         app:civ_border_color="#FF000000"
-        app:civ_border_width="2dp"
-        app:layout_constraintEnd_toStartOf="@+id/updatePay"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:civ_border_width="1dp"
+         />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/members"
+            android:gravity="center"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="44dp"
+            android:text="Members" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_updatePay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rl_members">
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/updatePay"
         android:layout_width="96dp"
         android:layout_height="96dp"
-        android:layout_margin="56dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginLeft="28dp"
         android:src="@drawable/up1"
         app:civ_border_color="#FF000000"
-        app:civ_border_width="2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/members"/>
+        app:civ_border_width="2dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="36dp"
+        android:layout_below="@+id/updatePay"
+        android:gravity="center"
+        android:text="Update Payment"/>
+    </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_chitIssue"
+        app:layout_constraintBottom_toTopOf="@+id/rl_stats"
+        app:layout_constraintEnd_toStartOf="@+id/rl_followUp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_members">
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/chitIssue"
         android:layout_width="96dp"
         android:layout_height="96dp"
-        android:layout_margin="56dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginLeft="28dp"
         android:src="@drawable/pay1"
         app:civ_border_color="#FF000000"
-        app:civ_border_width="2dp"
-        app:layout_constraintBottom_toTopOf="@+id/stats"
-        app:layout_constraintEnd_toStartOf="@+id/followUp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/members" />
-
+        app:civ_border_width="2dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ChitIssue"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="48dp"
+            android:layout_below="@+id/chitIssue"
+            android:gravity="center"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_followUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rl_chitIssue"
+        app:layout_constraintTop_toBottomOf="@+id/rl_updatePay"
+        app:layout_constraintBottom_toTopOf="@+id/rl_history">
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/followUp"
         android:layout_width="96dp"
         android:layout_height="96dp"
-        android:layout_margin="56dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginLeft="28dp"
         android:src="@drawable/follow"
         app:civ_border_color="#FF000000"
-        app:civ_border_width="2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/chitIssue"
-        app:layout_constraintTop_toBottomOf="@+id/updatePay"
-        app:layout_constraintBottom_toTopOf="@+id/history"/>
+        app:civ_border_width="2dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FollowUp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="44dp"
+        android:layout_below="@+id/followUp"
+        android:gravity="center"/>
+    </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_stats"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rl_history"
+        app:layout_constraintTop_toBottomOf="@+id/rl_chitIssue">
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/stats"
         android:layout_width="96dp"
         android:layout_height="96dp"
-        android:layout_margin="56dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginLeft="28dp"
         android:src="@drawable/cal3"
         app:civ_border_color="#FF000000"
-        app:civ_border_width="2dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/history"
-        app:layout_constraintTop_toBottomOf="@+id/chitIssue" />
+        app:civ_border_width="2dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="STATS"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="48dp"
+            android:layout_below="@+id/stats"
+            android:gravity="center"/>
+    </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_history"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rl_stats"
+        app:layout_constraintTop_toBottomOf="@+id/rl_followUp" >
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/history"
         android:layout_width="96dp"
         android:layout_height="96dp"
-        android:layout_margin="56dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginLeft="28dp"
         android:src="@drawable/hist"
         app:civ_border_color="#FF000000"
-        app:civ_border_width="2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/stats"
-        app:layout_constraintTop_toBottomOf="@+id/followUp" />
+        app:civ_border_width="2dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="History"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="48dp"
+        android:layout_below="@+id/history"
+        android:gravity="center"/>
+    </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

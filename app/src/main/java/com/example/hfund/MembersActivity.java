@@ -2,6 +2,7 @@ package com.example.hfund;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -70,6 +71,7 @@ public class MembersActivity extends AppCompatActivity {
             public ChitUserHolder onCreateViewHolder(ViewGroup group, int i) {
                 View view = LayoutInflater.from(group.getContext())
                         .inflate(R.layout.single_chituser_item, group, false);
+                view.setBackgroundColor(ContextCompat.getColor(group.getContext(),R.color.backgroundListItem));
 
                 return new ChitUserHolder(view);
             }
